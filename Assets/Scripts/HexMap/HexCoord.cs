@@ -4,15 +4,43 @@ using UnityEngine;
 
 public class HexCoord
 {
-    // Start is called before the first frame update
-    void Start()
+    private int _x, _z;
+
+    public int X
     {
-        
+        set
+        {
+            _x = value;
+        }
+
+        get
+        {
+            return _x;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public int Z
     {
-        
+        set
+        {
+            _z = value;
+        }
+
+        get
+        {
+            return _x;
+        }
     }
+
+    public HexCoord(int x, int z)
+    {
+        _x = x;
+        _z = z;
+    }
+    
+    public static HexCoord FromOffsetCoord(int x, int z)
+    {
+
+    }
+
 }
