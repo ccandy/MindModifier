@@ -29,9 +29,9 @@ public class HexGrid : MonoBehaviour
     {
         Vector3 pos;
 
-        pos.x = x * 10f;
+        pos.x = (x + z *0.5f - z/2) * (HexMatrics.InnerRad * 2.0f);
         pos.y = 0;
-        pos.z = z * 10f;
+        pos.z = z * (HexMatrics.OuterRad * 1.5f);
 
         HexCell cell = Instantiate<HexCell>(HexCellPrefab);
         _hexCells[i] = cell;
