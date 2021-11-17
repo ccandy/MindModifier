@@ -12,7 +12,6 @@ public class HexGrid : MonoBehaviour
     private int _height = 6;
 
     HexCell[] _hexCells;
-    HexMesh _hexMesh;
     
     private void Awake()
     {
