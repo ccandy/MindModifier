@@ -54,6 +54,7 @@ public class HexMesh : MonoBehaviour
         int vertexIndex = _vertices.Count;
 
         _vertices.Add(v1);
+
         _vertices.Add(v2);
         _vertices.Add(v3);
 
