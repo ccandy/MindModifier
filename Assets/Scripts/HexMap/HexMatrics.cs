@@ -9,13 +9,13 @@ public static class HexMatrics
 
     public static Vector3[] Corners =
     {
-        new Vector3(InnerRad, 0.0f, OuterRad * 0.5f),
-        new Vector3(InnerRad, 0.0f, 0.0f),
-        new Vector3(InnerRad, 0.0f, -OuterRad * 0.5f),
-        new Vector3(-InnerRad, 0.0f, -OuterRad * 0.5f),
-        new Vector3(-InnerRad, 0.0f, 0.0f),
-        new Vector3(-InnerRad, 0.0f, OuterRad * 0.5f),
-        new Vector3(0.0f, OuterRad)
+        new Vector3(0f, 0f, OuterRad),
+        new Vector3(InnerRad, 0f, 0.5f * OuterRad),
+        new Vector3(InnerRad, 0f, -0.5f * OuterRad),
+        new Vector3(0f, 0f, -OuterRad),
+        new Vector3(-InnerRad, 0f, -0.5f * OuterRad),
+        new Vector3(-InnerRad, 0f, 0.5f * OuterRad),
+        new Vector3(0f, 0f, OuterRad)
     };
 
 
