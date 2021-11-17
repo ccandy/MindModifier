@@ -6,12 +6,14 @@ public class HexGrid : MonoBehaviour
 {
 
     public HexCell HexCellPrefab;
+    public HexMesh Mesh;
 
     private int _width = 6;
     private int _height = 6;
 
     HexCell[] _hexCells;
-
+    HexMesh _hexMesh;
+    
     private void Awake()
     {
         _hexCells = new HexCell[_height * _width];
@@ -23,6 +25,11 @@ public class HexGrid : MonoBehaviour
                 CreateCell(x, z, cellIndex++);
             }
         }
+    }
+
+    private void Start()
+    {
+        Mesh.Triangulate(_hexCells);
     }
 
     private void CreateCell(int x, int z, int i)
@@ -39,4 +46,6 @@ public class HexGrid : MonoBehaviour
         cell.transform.SetParent(transform, false);
         cell.transform.localPosition = pos;
     }
+
+
 }

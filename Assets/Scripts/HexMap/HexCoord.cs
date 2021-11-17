@@ -40,7 +40,7 @@ public class HexCoord
     
     public static HexCoord FromOffsetCoord(int x, int z)
     {
-
+        return new HexCoord(x, z);
     }
 
 }
